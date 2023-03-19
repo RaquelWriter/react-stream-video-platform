@@ -1,8 +1,15 @@
 import { useState, useEffect } from 'react';
+import { useParams } from 'react-router-dom';
 
-function Player({ id }) {
-  console.log('COSA: ', id);
-  const [videoId, setVideoId] = useState(id);
+function GetId() {
+  const { id } = useParams();
+  console.log('THE ID: ', id);
+  return id;
+}
+
+function Player() {
+  console.log('COSA: ', GetId());
+  const [videoId, setVideoId] = useState(GetId());
   const [videoData, setVideoData] = useState({});
 
   useEffect(() => {
