@@ -1,32 +1,34 @@
 const express = require('express');
-const fs = require('fs');
+const fs = require('fs'); // getting the file size, browser returns a range param
 const path = require('path');
 const cors = require('cors');
 
 const videos = [
   {
     id: 0,
-    poster: '/video/0/poster',
+    poster: '/assets/0.png',
     duration: '3 mins',
-    name: 'Sample 1',
+    name: 'Video 1',
   },
   {
     id: 1,
-    poster: '/video/1/poster',
+    poster: '/assets/1.png',
     duration: '4 mins',
-    name: 'Sample 2',
+    name: 'Video 2',
   },
   {
     id: 2,
-    poster: '/video/2/poster',
+    poster: '/assets/2.png',
     duration: '2 mins',
-    name: 'Sample 3',
+    name: 'Video 3',
   },
 ];
 
 const app = express();
 
 app.use(cors());
+// This will serve any file in the assets directory under the /assets route.
+app.use('/assets', express.static(path.join(__dirname, 'assets')));
 
 app.get('/videos', (req, res) => res.json(videos));
 
@@ -62,6 +64,11 @@ app.get('/video/:id', (req, res) => {
     res.writeHead(200, head);
     fs.createReadStream(path).pipe(res);
   }
+});
+
+app.get('/video/:id/poster', (req, res) => {
+  const imagePath = `/assets/${req.params.id}`;
+  res.sendFile(imagePath);
 });
 
 app.listen(4000, () => {
