@@ -34,10 +34,10 @@ app.get('/video/:id/data', (req, res) => {
   const id = parseInt(req.params.id, 10);
   res.json(videos[id]);
 });
-
+/* 
 app.get('/video', (req, res) => {
   res.sendFile('assets/sample.mp4', { root: __dirname });
-});
+}); */
 
 app.listen(4000, () => {
   console.log('Listening on port 4000!');
