@@ -27,6 +27,7 @@ function Home() {
               <Link to={`/player/${video.id}`}>
                 <div className='card border-0'>
                   <img
+                    className='thumb'
                     src={`http://localhost:4000${video.poster}`}
                     alt={video.name}
                   />
