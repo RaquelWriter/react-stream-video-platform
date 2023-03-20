@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import girl from './images/Auora_lilla.png';
-import logo from './images/logo2.png';
+// import girl from './images/Auora_lilla.png';
+import logo from './images/logo4.png';
 
 function Home() {
   const [videos, setVideos] = useState([]);
@@ -23,7 +23,7 @@ function Home() {
   return (
     <>
       <div className='header-container'>
-        <img style={{ width: '200px' }} src={girl} alt='Tales Castle girl' />
+        <div className='title'>Tales Castle</div>
         <div>
           <img style={{ width: '200px' }} src={logo} alt='Tales Castle Logo' />
         </div>
