@@ -6,16 +6,6 @@ import './App.css';
 import CustomCursor from 'custom-cursor-react';
 import 'custom-cursor-react/dist/index.css';
 
-/* function App() {
-  return (
-    <Router>
-      <Routes>
-        <Route path='/' exact element={<Home />}></Route>
-        <Route path='/player/:id' element={<Player />}></Route>
-      </Routes>
-    </Router>
-  );
-} */
 const App = () => (
   <div>
     <CustomCursor

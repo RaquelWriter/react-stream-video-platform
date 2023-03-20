@@ -7,6 +7,9 @@
 # videos
 /server/assets
 
+# images
+/client/src/images
+
 # production
 /build
 

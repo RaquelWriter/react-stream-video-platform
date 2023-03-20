@@ -14,14 +14,24 @@
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  /* background-color: #282c34; */
+  background-color: white;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+}
+
+.header-container {
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: #750d62;
 }
 
 .App-link {
@@ -35,8 +45,15 @@ a:hover {
   text-decoration: none;
   cursor: pointer;
 }
+img .girl {
+  width: 50px;
+  height: 50px;
+}
+div.col-md-4 {
+  padding: 10px;
+}
 .card {
-  border: 2px solid rgb(0, 0, 0);
+  border: 2px solid black;
   min-height: 8em;
   border-radius: 10%;
   overflow: hidden;
@@ -51,11 +68,17 @@ a:hover {
   object-fit: cover;
 }
 
-@keyframes App-logo-spin {
+@keyframes App-girl-spin {
   from {
     transform: rotate(0deg);
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+@media screen and (max-width: 640px) {
+  img .girl {
+    width: 10px;
   }
 }
