@@ -8,19 +8,19 @@ const videos = [
     id: 0,
     poster: '/assets/0.png',
     duration: '3 mins',
-    name: 'Video 1',
+    name: 'The magic forest and the doleiform',
   },
   {
     id: 1,
     poster: '/assets/1.png',
     duration: '4 mins',
-    name: 'Video 2',
+    name: 'The source of water lost',
   },
   {
     id: 2,
     poster: '/assets/2.png',
     duration: '2 mins',
-    name: 'Video 3',
+    name: 'The adventures of the pink-furry guinea pig',
   },
 ];
 

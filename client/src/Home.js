@@ -25,7 +25,7 @@ function Home() {
           {videos.map((video) => (
             <div className='col-md-4' key={video.id}>
               <Link to={`/player/${video.id}`}>
-                <div className='card border-0'>
+                <div className='card'>
                   <img
                     className='thumb'
                     src={`http://localhost:4000${video.poster}`}
